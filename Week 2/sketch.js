@@ -31,7 +31,7 @@ function draw()
         Yside+=random(10);
       //}
   
-  if(Xside > && Yside > hieght) 
+  if(Xside > 400 && Yside > 400) 
   {
     Xside = 50;
     Yside = 50;
