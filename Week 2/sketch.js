@@ -1,8 +1,8 @@
   var x = 100;
   var y = 100;
   var side = 50;
-  var sidex = 100;
-  var sidey = 100;
+  var Xside = 50;
+  var Yside = 50;
 
 
 function setup() 
@@ -22,6 +22,14 @@ function draw()
   circle(210, 150, 30);
   circle(150, 80, 30);
   circle(200, 280, 30 );
+  
+  fill(75,100,29);
+    for(var i = 0; i < 5; i++)
+      {
+        rect(Xside,Yside,side);
+        Xside+=random(5);
+        Yside+=random();
+      }
   
   textSize (20);
   fill(31,31,31); 
@@ -52,9 +60,8 @@ function draw()
     {
         y+=5;
     }
-  
-
-}
+  }
+        
 }
 
 
