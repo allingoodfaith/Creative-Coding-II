@@ -11,9 +11,12 @@ var moveX = 100;
 var moveY = 50;
 var xChange = 100;
 
+//counter variable
+var counter = 0;
+
 function preload()
 {
-        //loads images and fonts in this function
+    //loads images and fonts in this function
     image1 = loadImage("./images/image1.png");
     image2 = loadImage("./images/image2.png");
     image3 = loadImage("./images/image3.png");
@@ -30,15 +33,15 @@ function draw()
 {
     background (212,185,237);
 
+    drawCounter();
+    
     image(image1,moveX,moveY,400,400);
     image(image2,550,50,275,400);
     image(image3,875,50,675,400); 
-
-    drawCounter();
-
+    
     movement();
 
-    //textFont(myFont);
+    textFont(myFont);
     textSize(5);
     fill(0);
     text("some of my artwork in recent years",25, 750);
@@ -46,17 +49,17 @@ function draw()
 
 function movement()
 {
-    if(moveX > height-10 || moveY < 0);
+    if(moveX > height-0 || moveY < 0);
     {
-        xChange *= -15;
+        xChange *= -1;
     }
     moveX *= moveY;
 }
 
 function drawCounter()
 {
-    textSize(50);
-    text(counter, 25,25);
+    textSize(20);
+    text(counter, 50,25);
 }
 
 function displayCounter()
