@@ -9,7 +9,10 @@ var myFont;
 //movement variables 
 var moveX = 100;
 var moveY = 50;
-var xChange = 100;
+var xChange = 5;
+
+//size variables
+var image1size = 400;
 
 //counter variable
 var counter = 0;
@@ -35,29 +38,30 @@ function draw()
 
     drawCounter();
     
-    image(image1,moveX,moveY,400,400);
+    image(image1,moveX,moveY,image1size,400);
     image(image2,550,50,275,400);
     image(image3,875,50,675,400); 
     
     movement();
 
     textFont(myFont);
-    textSize(5);
-    fill(0);
-    text("some of my artwork in recent years",25, 750);
+    textSize(30);
+    fill(100);
+    text("some of my artwork in recent years",750,25);
 }
 
 function movement()
 {
-    if(moveX > height-0 || moveY < 0);
+    if(moveY > height-image1size/2 || moveY < height-image1size/2);
     {
         xChange *= -1;
     }
-    moveX *= moveY;
+    moveY += xChange;
 }
 
 function drawCounter()
 {
+    textFont(myFont);
     textSize(20);
     text(counter, 50,25);
 }
