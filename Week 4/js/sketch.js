@@ -1,5 +1,7 @@
 //variables
 
+var counter = 0;
+
 var person;
 var character = [];
 var idleAnimation = [];
@@ -9,9 +11,10 @@ var IdleObject;
 function preload()
 {
     idleAnimation = loadStrings ("../images/idle/idle.txt");
+    //console.log("test")
 }
 
-function set()
+function setup()
 {
     createCanvas(500,500);
     setInterval(displayCounter, 50);
@@ -27,12 +30,12 @@ function draw()
     IdleObject.draw(i);
 }
 
-function displayCounter();
+function displayCounter()
 {
     counter++;
 
     i++;
-    if (i > 16) {
+    if (i > 15) {
         i = 0;
     }
 }
