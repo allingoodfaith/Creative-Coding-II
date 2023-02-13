@@ -8,6 +8,12 @@ var idleAnimation = [];
 var i = 0;
 var IdleObject;
 
+
+var GumDrop = [];
+var CandyObject;
+var c = 0; 
+var circleR = 20;
+
 function preload()
 {
     idleAnimation = loadStrings ("../images/idle/idle.txt");
@@ -18,14 +24,30 @@ function setup()
 {
     createCanvas(500,500);
     setInterval(displayCounter, 50);
-    IdleObject = new idle(idleAnimation);
 
-    IdleObject.animate();
+        
+    CandyObject = new Candy();
+    //IdleObject.animate();
+
+    IdleObject = new idle(idleAnimation);  
+
+    for(var c = 0; c < 3; c++)
+    {
+        CandyObject = new Candy (random(20, 500),random(20, 500),random(20,150)); 
+        GumDrop[c] = CandyObject;   
+    }  
 }
+
 
 function draw()
 {
     background(155,222,232);
+   
+    for (var c = 0; c < 3; c++) 
+    {
+        GumDrop[c].drawCandy();
+        //console.log("test")
+    }
 
     IdleObject.draw(i);
 }
