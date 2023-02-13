@@ -1,4 +1,4 @@
-class Amination
+class Animation
 {
     constructor(stringInput)
     {

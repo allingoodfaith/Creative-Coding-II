@@ -1,4 +1,4 @@
-var Kitty1;
+var GingerBreadGirl;
 var inputStrings;
 
 function preload() {
@@ -11,10 +11,10 @@ function setup() {
 
   console.log("THIS SUCKS!!!!!!!!!!! WHY DOES THIS WORK!!!!!!!!!!!!!");
   
-  Kitty1 = new catCharacter(inputStringsIdle, inputStringsWalk);
+  GingerBreadGirl = new Character(inputStringsIdle, inputStringsWalk);
 }
 
 function draw(){
   background(255);
-  Kitty1.draw(100, 100);
+  GingerBreadGirl.draw(100, 100);
 }
