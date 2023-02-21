@@ -34,10 +34,10 @@ function setup()
     CandyObject = new Candy();
     //IdleObject.animate();
 
-    IdleObject = new idle(idleAnimation 200,200,208,227); 
+    IdleObject = new idle(idleAnimation, 200,200,208,227); 
     idlecharacter.animate(); 
 
-    WalkObject = new idle(walkAnimation 200,200,208,227); 
+    WalkObject = new idle(walkAnimation, 200,200,208,227); 
     idlecharacter.animate();
 
     for(var c = 0; c < 3; c++)
