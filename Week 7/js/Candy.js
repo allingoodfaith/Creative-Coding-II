@@ -1,17 +1,19 @@
 class Candy
 {
-
-    constructor(x,y,diameter)
+    constructor(x,y,diameter,r,b,g)
     {
         this.x = x;
         this.y = y;
         this.diameter = diameter;
+        this.r = r;
+        this.b = b;
+        this.g = g;
     }
 
     drawCandy()
     {
         noStroke();
-        fill(235,89,152);
+        fill(this.r, this.g, this.b);
         circle(this.x,this.y,this.diameter); 
     }
 
@@ -26,5 +28,9 @@ class Candy
 
     getdiameter() {
         return this.diameter;
+    }
+
+    getG() {
+        return this.g;
     }
 }
