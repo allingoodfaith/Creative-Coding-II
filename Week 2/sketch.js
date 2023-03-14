@@ -24,19 +24,13 @@ function draw()
   circle(200, 280, 30 );
   
   fill(75,100,29);
-    //for(var i = 0; i < 5; i++)
-      //{
+    for(var i = 0; i < 5; i++)
+      {
         rect(Xside,Yside,side);
-        Xside+=random(10);
-        Yside+=random(10);
-      //}
+        Xside+=random(5);
+        Yside+=random();
+      }
   
-  if(Xside > 400 && Yside > 400) 
-  {
-    Xside = 50;
-    Yside = 50;
-  }
-    
   textSize (20);
   fill(31,31,31); 
   text("Grete", 250, 350);

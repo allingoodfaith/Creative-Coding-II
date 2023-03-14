@@ -43,12 +43,9 @@ class animationImage
         this.incrementIndex();
         if(this.direction == "reverse")
         {
-            push();
-            translate(this.w, 0);
-
-            scale(-1.0, 1.0);
+            translate(this.w,0);
+            scale(-1.0,1.0);
             image(this.imageObject[this.i], -this.x, this.y, this.w, this.h);
-            pop();
         }
         else
         {
