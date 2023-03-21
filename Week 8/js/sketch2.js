@@ -5,14 +5,17 @@ var walkPaths = [];
 
 function preload()
 {
-    idlePaths = loadstrings("../images/idle/idle.txt");
-    walkPaths = loadstrings("../images/walk/walk.txt");
+    idlePaths = loadStrings("./images/idle/idle.txt");
+    walkPaths = loadStrings("./images/walk/walk.txt");
 }
 
 function setup()
 {
-    createCancas(1000,1000);
-
+    console.log(idlePaths[0]);
+    createCanvas(1000, 1000);
+    myAnimation = new animationImage2(300, 300, 208, 227);
+    myAnimation.loadAnimation('idle', idlePaths);
+    myAnimation.loadAnimation('walk', walkPaths);
 }
 
 function draw()
@@ -34,7 +37,7 @@ function draw()
         myAnimation.updatePosition('reverse');
         myAnimation.drawingAnimation('walk');
     }
-    else if(kb.pressing('w'))
+   /*else if(kb.pressing('w'))
     {
         myAnimation.updatePosition('up');
         myAnimation.drawingAnimation('walk');
@@ -43,7 +46,7 @@ function draw()
     {
         myAnimation.updatePosition('down');
         myAnimation.drawingAnimation('walk');
-    }
+    }*/
     else
     {
         myAnimation.drawAnimation('idle');

@@ -1,4 +1,4 @@
-class animationImage {
+class animationImage2 {
 
     constructor(x, y, w, h) {
         this.x = x;
@@ -55,6 +55,18 @@ class animationImage {
             this.currentAnimation.direction = 180;
             this.currentAnimation.speed = 1;
 
+        /*else if (animationType == 'walk' && this.direction == 'up') {
+
+                this.currentAnimation.mirror.x = true;
+                this.currentAnimation.direction = 180;
+                this.currentAnimation.speed = 1;
+
+        else if (animationType == 'walk' && this.direction == 'down') {
+
+                this.currentAnimation.mirror.x = true;
+                this.currentAnimation.direction = 180;
+                this.currentAnimation.speed = 1;        
+        */
         }
         else {
             this.currentAnimation.velocity.x = 0;
