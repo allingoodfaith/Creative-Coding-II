@@ -1,13 +1,17 @@
 class animationImage2 {
 
-    constructor(x, y, w, h) {
+    constructor( x, y, w, h)
+    {
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
+        this.imageObjects = [];
         this.currentAnimation;
-        this.createAnimation();
-        this.direction = "";
+        this.createAnimation(); // new function
+        this.i = 0;
+        this.currentFrameCount = 0;
+        this.direction  = "";      
     }
 
     getX() {
