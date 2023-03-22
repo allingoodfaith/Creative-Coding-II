@@ -14,15 +14,18 @@ class animationImage2 {
         this.direction  = "";      
     }
 
-    getX() {
+    getX() 
+    {
         return this.x;
     }
 
-    setX(x) {
+    setX(x) 
+    {
         this.x = x;
     }
 
-    setCurrentFrameCount(currentFrameCount) {
+    setCurrentFrameCount(currentFrameCount) 
+    {
 
         this.currentFrameCount = currentFrameCount;
     }
@@ -32,13 +35,10 @@ class animationImage2 {
     }
 
     loadAnimation(animationType, fileNames) {
-
-
         this.currentAnimation.addAnimation(animationType, fileNames[0], fileNames[fileNames.length - 1]);
         // set the hit box
         this.currentAnimation.width = 208;
         this.currentAnimation.height = 227;
-
     }
 
 
@@ -58,22 +58,26 @@ class animationImage2 {
             this.currentAnimation.mirror.x = true;
             this.currentAnimation.direction = 180;
             this.currentAnimation.speed = 1;
+        }
 
-        /*else if (animationType == 'walk' && this.direction == 'up') {
+        else if (animationType == 'walk' && this.direction == 'up') {
 
-                this.currentAnimation.mirror.x = true;
-                this.currentAnimation.direction = 180;
+                this.currentAnimation.mirror.x = false;
+                this.currentAnimation.direction = 90;
                 this.currentAnimation.speed = 1;
+        }
 
         else if (animationType == 'walk' && this.direction == 'down') {
 
                 this.currentAnimation.mirror.x = true;
-                this.currentAnimation.direction = 180;
-                this.currentAnimation.speed = 1;        
-        */
+                this.currentAnimation.direction = 270;
+                this.currentAnimation.speed = 1;       
+         
+        
         }
         else {
             this.currentAnimation.velocity.x = 0;
+            this.currentAnimation.velocity.y = 0;
         }
 
 
@@ -96,7 +100,7 @@ class animationImage2 {
     }
 
     isColliding(myImage) {
-        return this.currentAnimation.collide(myImage);
+        return this.currentAnimation.collide();
     }
 
 }

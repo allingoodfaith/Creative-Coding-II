@@ -1,16 +1,16 @@
-../images/idle/Idle 001.png
-../images/idle/Idle 002.png
-../images/idle/Idle 003.png
-../images/idle/Idle 004.png
-../images/idle/Idle 005.png
-../images/idle/Idle 006.png
-../images/idle/Idle 007.png
-../images/idle/Idle 008.png
-../images/idle/Idle 009.png
-../images/idle/Idle 010.png
-../images/idle/Idle 011.png
-../images/idle/Idle 012.png
-../images/idle/Idle 013.png
-../images/idle/Idle 014.png
-../images/idle/Idle 015.png
-../images/idle/Idle 016.png
+../images/idle/Idle0001.png
+../images/idle/Idle0002.png
+../images/idle/Idle0003.png
+../images/idle/Idle0004.png
+../images/idle/Idle0005.png
+../images/idle/Idle0006.png
+../images/idle/Idle0007.png
+../images/idle/Idle0008.png
+../images/idle/Idle0009.png
+../images/idle/Idle0010.png
+../images/idle/Idle0011.png
+../images/idle/Idle0012.png
+../images/idle/Idle0013.png
+../images/idle/Idle0014.png
+../images/idle/Idle0015.png
+../images/idle/Idle0016.png
