@@ -1,6 +1,6 @@
 class GoodCandy
 {
-    constructor(x,y,diameter)
+    constructor(x,y)
     {
         this.x = x;
         this.y = y;

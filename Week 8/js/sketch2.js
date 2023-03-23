@@ -52,6 +52,8 @@ function draw()
 {
     background(155,222,232);
 
+    drawboundary(10,10);
+
     for (var c = 0; c < 3; c++) 
     {
         GumDrop1[c].drawCandy();

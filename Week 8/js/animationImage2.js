@@ -11,7 +11,9 @@ class animationImage2 {
         this.createAnimation(); // new function
         this.i = 0;
         this.currentFrameCount = 0;
-        this.direction  = "";      
+        this.direction  = "";
+        this.GoodCandyObject;
+        this.BadCandyObject;      
     }
 
     getX() 
@@ -40,7 +42,6 @@ class animationImage2 {
         this.currentAnimation.width = 208;
         this.currentAnimation.height = 227;
     }
-
 
     drawAnimation(animationType) {
         
@@ -99,7 +100,7 @@ class animationImage2 {
        
     }
 
-    isColliding(myImage) {
+    isColliding(boundaries) {
         return this.currentAnimation.collide();
     }
 
