@@ -5,7 +5,6 @@ class GoodCandy
         this.x = x;
         this.y = y;
         this.diameter = 50;
-         
     }
 
     drawCandy()

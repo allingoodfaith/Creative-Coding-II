@@ -104,4 +104,10 @@ class animationImage2 {
         return this.currentAnimation.collide();
     }
 
+    isColliding(GoodCandyObject) {
+        return this.currentAnimation.collide(GoodCandyObject);
+    }
+    isColliding(BadCandyObject) {
+        return this.currentAnimation.collide(BadCandyObject);
+    }
 }

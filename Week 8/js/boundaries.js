@@ -6,7 +6,7 @@ class boundaries
         this.height = height;
     }
 
-    drawrectangle()
+    drawboundary()
     {
         noStroke();
         fill(4,137,209);
