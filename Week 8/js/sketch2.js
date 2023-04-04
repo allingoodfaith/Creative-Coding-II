@@ -1,8 +1,8 @@
 //var for animation
 var idlePaths = [];
-var myAnimation;
 var myWalkAnimation;
 var walkPaths = [];
+
 
 
 //var for candys 
@@ -10,7 +10,9 @@ var GumDrop1 = [];
 var GumDrop2 = [];
 var GoodCandyObject;
 var BadCandyObject;
-var c = 0; 
+var CandyObject;
+var GumDrop = [];
+var c = 0;
 var circleR = 20;
 
 //health 
@@ -19,8 +21,9 @@ var health = 100;
 //points
 var points = 0;
 
-function preload()
-{
+var Ball;
+
+function preload() {
     idlePaths = loadStrings("../images/idle/idle.txt");
     walkPaths = loadStrings("../images/walk/walk.txt");
     backgroundSound = loadSound("../sounds/music/background music.wav")
@@ -28,97 +31,94 @@ function preload()
     minussound = loadSound("../sounds/sfx/minus point.mp3")
 }
 
-function setup()
-{
-   // console.log(idlePaths[2]);
+function setup() {
+    // console.log(idlePaths[2]);
     createCanvas(1000, 1000);
     myAnimation = new animationImage2(300, 300, 208, 227);
     myAnimation.loadAnimation('idle', idlePaths);
     myAnimation.loadAnimation('walk', walkPaths);
 
-    GoodCandyObject = new GoodCandy();
-    for(var c = 0; c < 5; c++)
-    {
-        GoodCandyObject = new GoodCandy (random(50, 900),random(50, 900)); 
-        GumDrop1[c] = GoodCandyObject;   
-    }
+    /* GoodCandyObject = new GoodCandy();
+     for(var c = 0; c < 5; c++)
+     {
+         GoodCandyObject = new GoodCandy (random(50, 900),random(50, 900)); 
+         GumDrop1[c] = GoodCandyObject;   
+     }
+ 
+     BadCandyObject = new BadCandy();
+     for(var c = 0; c < 5; c++)
+     {
+         BadCandyObject = new BadCandy (random(50, 900),random(50, 900)); 
+         GumDrop2[c] = BadCandyObject;   
+     } */
 
-    BadCandyObject = new BadCandy();
-    for(var c = 0; c < 5; c++)
+    for (var c = 0; c < 20; c++)
     {
-        BadCandyObject = new BadCandy (random(50, 900),random(50, 900)); 
-        GumDrop2[c] = BadCandyObject;   
+        GumDrop = new Sprite(random(50, 900), random(50, 900),'static');
+        GumDrop.diameter = 50;
+
+        if (c %2 == 0)
+        {
+            CandyObject = new Candy(random(50, 900), random(50, 900),235,89,152);
+        }
+        else
+        {
+            CandyObject = new Candy(random(50, 900), random(50, 900),109,32,168);
+        }
+        GumDrop[c] = CandyObject;
     }
+    
 }
 
-function draw()
-{
-    background(155,222,232);
+function draw() {
+    background(155, 222, 232);
 
-    //drawboundary(10,10);
 
-    for (var c = 0; c < 5; c++) 
-    {
-        GumDrop1[c].drawCandy();
-        GumDrop2[c].drawCandy();
+    for (var c = 0; c < GumDrop.length; c++) {
+        GumDrop[c].drawCandy();
+        
+        //GumDrop1[c].drawCandy();
+        //GumDrop2[c].drawCandy();
         //console.log("test")
     }
 
-    if(kb.press)
-    {
+    if (kb.press) {
         !backgroundSound.isPlaying()
-        backgroundSound.loop();  
+        backgroundSound.loop();
     }
 
-    if(kb.pressing('d'))
-    {
+    if (kb.pressing('d')) {
         myAnimation.updatePosition('forward');
         myAnimation.drawAnimation('walk');
-        if(myAnimation.isColliding(GoodCandyObject,BadCandyObject))
-        {
+
+       /* if (myAnimation.isColliding(GumDrop)){
             myAnimation.drawAnimation('idle');
-            myAnimation.updateAnimation('idle');
-        }
+
+        }*/ 
+
+
+        /*for (var i = 0; i < GumDrop.length; i++) {
+            if (myAnimation.isColliding(GumDrop[i])) {
+                myAnimation.drawAnimation('idle');
+                myAnimation.updateAnimation('idle');
+            }
+        }*/
+        
+        
     }
-    else if(kb.pressing('a'))
-    {
+    else if (kb.pressing('a')) {
         myAnimation.updatePosition('reverse');
         myAnimation.drawAnimation('walk');
     }
-   else if(kb.pressing('s'))
-    {
+    else if (kb.pressing('s')) {
         myAnimation.updatePosition('up');
         myAnimation.drawAnimation('walk');
     }
-    else if(kb.pressing('w'))
-    {
+    else if (kb.pressing('w')) {
         myAnimation.updatePosition('down');
         myAnimation.drawAnimation('walk');
     }
-    else
-    {
+    else {
         myAnimation.drawAnimation('idle');
     }
-
-    /*for(var i = 0; i < GumDrop1.length; i++)
-    {
-    isColliding = myAnimation.isColliding(GumDrop1 [i]);
-    if(isColliding)
-    {
-        points++;
-        plussound.Play();
-        GoodCandyObject = new GoodCandy (random(50, 900),random(50, 900)); 
-    }
-    }
-
-    for(var i = 0; i < GumDrop2.length; i++)
-    {
-     isColliding = myAnimation.isColliding(GumDrop2 [i]);
-     if(isColliding)
-    {
-        health--;
-        minussound.Play();
-        BadCandyObject = new BadGoodCandy (random(50, 900),random(50, 900)); 
-    }
-   }*/
 }

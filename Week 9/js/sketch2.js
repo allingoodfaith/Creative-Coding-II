@@ -12,9 +12,11 @@ var GoodCandyObject;
 var BadCandyObject;
 var c = 0; 
 var circleR = 20;
+var GoodCandyHealth = 50;
 
 //health 
-var health = 100;
+var characterhealth = 100;
+
 
 //points
 var points = 0;

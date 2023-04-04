@@ -2,14 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\images",
-    "\\images\\dead",
-    "\\images\\idle",
-    "\\images\\jump",
-    "\\images\\run",
-    "\\images\\walk",
     "\\js",
     "\\libs"
   ],
-  "SelectedNode": "\\images\\walk\\walk.txt",
+  "SelectedNode": "\\js\\Candy.js",
   "PreviewInSolutionExplorer": false
 }

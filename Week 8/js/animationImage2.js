@@ -33,7 +33,7 @@ class animationImage2 {
     }
 
     createAnimation() {
-        this.currentAnimation = createSprite(this.x, this.y);
+        this.currentAnimation = createSprite(this.x, this.y,'kinematic');
     }
 
     loadAnimation(animationType, fileNames) {
@@ -100,14 +100,17 @@ class animationImage2 {
        
     }
 
-    isColliding(boundaries) {
+   /* isColliding() {
         return this.currentAnimation.collide();
     }
 
     isColliding(GoodCandyObject) {
         return this.currentAnimation.collide(GoodCandyObject);
     }
-    isColliding(BadCandyObject) {
-        return this.currentAnimation.collide(BadCandyObject);
+    */
+    isColliding(GumDrop) {
+        return this.currentAnimation.collides(GumDrop);
     }
+    
+
 }
